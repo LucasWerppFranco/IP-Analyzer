@@ -1,3 +1,5 @@
+use crossterm::style::{Color, Stylize};
+
 pub fn run(ip: String) {
     match crate::core::ip::parse(&ip) {
         Ok(parsed) => {
@@ -5,7 +7,7 @@ pub fn run(ip: String) {
             crate::output::print_subnet_result(&result);
         }
         Err(e) => {
-            eprintln!("Error: {}", e);
+            eprintln!("{}", format!("Error: {}", e).with(Color::Red));
             std::process::exit(1);
         }
     }
