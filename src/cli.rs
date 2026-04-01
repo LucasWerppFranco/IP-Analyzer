@@ -12,4 +12,5 @@ pub enum Commands {
     Validate { ip: String },
     Info { ip: String },
     Subnet { ip: String },
+    Menu,
 }
