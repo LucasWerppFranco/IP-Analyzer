@@ -49,6 +49,7 @@ fn run_interactive_mode() {
                 println!("  calc <ip>             - Perform calculations on an IP");
                 println!("  validate <ip>         - Validate an IP address format");
                 println!("  info <ip>             - Display information about an IP");
+                println!("  menu                  - Open interactive menu mode");
                 println!("  help                  - Show this help message");
                 println!("  exit, quit            - Exit the program");
                 println!();
@@ -84,6 +85,9 @@ fn run_interactive_mode() {
                 } else {
                     println!("{}", format!("Info command with IP: {}", parts[1]).with(Color::Green));
                 }
+            }
+            "menu" => {
+                commands::execute(cli::Commands::Menu);
             }
             _ => {
                 println!("{}", format!("Unknown command: '{}'. Type 'help' for available commands.", command).with(Color::Red));
