@@ -25,7 +25,7 @@ cargo build --release
 
 Run the code:
 ```
-./target/release/meu_projeto
+./target/release/IP-Analyzer
 ```
 
 ## Thanks
