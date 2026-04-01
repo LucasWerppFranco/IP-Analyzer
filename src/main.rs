@@ -9,14 +9,14 @@ use clap::Parser;
 use crossterm::style::{Color, Stylize};
 use std::io::{self, Write};
 
-const ASCII_ART: &str = include_str!("../art.txt");
+const ASCII_ART: &str = include_str!("../assets/art.txt");
 
 fn show_welcome_screen() {
     // Print ASCII art in blue
     println!("{}", ASCII_ART.with(Color::Blue));
     println!("-------------------------------------------------------------------------------------------------------");
-    println!("                                      Welcome to IP-Analyzer!!!");
-    println!("                      If you need help, type \"help\" or press Ctrl+C to exit.");
+    println!("|                                     Welcome to IP-Analyzer!!!                                       |");
+    println!("|                     If you need help, type \"help\" or press Ctrl+C to exit.                          |");
     println!("-------------------------------------------------------------------------------------------------------");
     println!();
 }
